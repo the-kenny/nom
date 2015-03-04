@@ -1,4 +1,4 @@
-(defproject org.clojars.the-kenny/nom "0.1.0"
+(defproject org.clojars.the-kenny/nom "0.2.0-SNAPSHOT"
   :description "Improve your Om with Nom"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
