@@ -1,6 +1,6 @@
 (defproject org.clojars.the-kenny/nom "0.2.0-SNAPSHOT"
   :description "Improve your Om with Nom"
-  :url "http://example.com/FIXME"
+  :url "https://github.com/the-kenny/nom"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.omcljs/om "0.8.8" :scope "provided"]

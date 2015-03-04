@@ -45,6 +45,10 @@ Which will emit:
         [:.text  (:text todo)]]))))
 ```
 
+You can find a short post on how this macro works and how it
+eliminates boilerplate on my
+[Blog](http://blog.tarn-vedra.de/posts/om-removing-boilerplate.html).
+
 ### `defcomponentmethod`
 
 Same as ```defcomponent``` but takes an extra `dispatch-value` arg and
