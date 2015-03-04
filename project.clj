@@ -6,4 +6,6 @@
   :dependencies [[org.omcljs/om "0.8.8" :scope "provided"]
                  [sablono "0.3.4"       :scope "provided"]]
   :exclusions [cljsjs/react]
-  :profiles {:provided {:dependencies [[org.clojure/clojure "1.6.0"]]}})
+  :profiles {:provided {:dependencies [[org.clojure/clojure "1.6.0"]]}}
+  :deploy-repositories [["releases" :clojars]
+                        ["snapshots" :clojars]])
