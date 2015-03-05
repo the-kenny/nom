@@ -1,4 +1,4 @@
-(defproject org.clojars.the-kenny/nom "0.1.1-SNAPSHOT"
+(defproject org.clojars.the-kenny/nom "0.1.1"
   :description "Improve your Om with Nom"
   :url "https://github.com/the-kenny/nom"
   :license {:name "Eclipse Public License"
