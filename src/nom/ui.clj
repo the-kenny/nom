@@ -1,5 +1,5 @@
 (ns nom.ui
-  (:require clojure.string))
+  (:require [clojure.string :as s]))
 
 (defmacro css-transition-group [options & body]
   `(let [group# js/React.addons.CSSTransitionGroup
@@ -23,8 +23,8 @@
 ;;; Decomponent Macro
 
 (defn ^:private method->interface [method]
-  (->> (clojure.string/split (str (first method)) #"-")
-       (map clojure.string/capitalize)
+  (->> (s/split (str (first method)) #"-")
+       (map s/capitalize)
        (apply str "I")
        (symbol "om.core")))
 
@@ -38,6 +38,11 @@
                 ~(last body)))
       method)))
 
+(defn ^:private name->display-name [fn-name]
+  (->> (s/split (name fn-name) #"-")
+       (map s/capitalize)
+       (s/join "")))
+
 (defmacro defcomponent [name [& args] & methods]
   (let [impls (mapcat (comp (juxt method->interface identity)
                             wrap-html)
@@ -47,7 +52,7 @@
        (reify
          om.core/IDisplayName
          (~'display-name [_#]
-           ~(clojure.string/capitalize name))
+           ~(name->display-name name))
          ~@syms
          ~@impls))))
 
